@@ -72,7 +72,7 @@ fs.readFile(tempPath, "utf8", function(err, data) {
     console.log(html_beautify(data, options["html"]));
   }
   else if (isJS(filePath, data)) {
-    console.log(js_beautify(data, options["js"]));
+    process.stdout.write(js_beautify(data, options["js"]));
   }
 });
 
